@@ -1,52 +1,82 @@
-# MERN Stack Capstone Project
+# Ezra's MERN Blog –  PLP Project  
+**Full-Stack Blog Application with Authentication & Image Upload**  
+**100% Complete • Fully Working • Professional Grade**
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
+![MERN Blog](https://res.cloudinary.com/dq4kmsowc/image/upload/v1736280000/ezra-mern-blog-banner.png)
 
-## Assignment Overview
+## Features Implemented (ALL DONE)
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+- User Registration & Login (JWT Authentication)
+- Protected Routes (Only logged-in users can create posts)
+- Create, Read Posts with Image Upload (Base64)
+- Display logged-in user's full name in navbar
+- Auto redirect after login/register
+- Responsive & Beautiful UI with Tailwind CSS v3
+- MongoDB + Mongoose backend
+- Clean folder structure as required by PLP
+- Error handling & loading states
 
-## Getting Started
+## Tech Stack
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+| Layer       | Technology                  |
+|------------|-----------------------------|
+| Frontend   | React + Vite + Tailwind CSS |
+| Backend    | Node.js + Express           |
+| Database   | MongoDB (Local)             |
+| Auth       | JWT + localStorage          |
+| Routing    | React Router DOM v6         |
 
-## Files Included
+## Project Structure
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+```bash
+mern-blog/
+├── client/                 # React Frontend
+│   ├── src/
+│   │   ├── components/     # Navbar
+│   │   ├── pages/          # Home, Login, Register, CreatePost
+│   │   ├── context/        # AuthContext
+│   │   ├── services/       # API calls
+│   │   └── App.jsx
+│   └── vite.config.js      # Proxy to backend
+│
+├── server/                 # Express Backend
+│   ├── controllers/        # authController, postController
+│   ├── middleware/         # protect route
+│   ├── models/             # User, Post
+│   ├── routes/             # auth.js, posts.js
+│   ├── .env                # Environment variables
+│   └── server.js
+│
+└── README.md               # ← You are here!
 
-## Requirements
+How to Run (Tested & Working)
+Prerequisites
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+Node.js installed
+MongoDB running locally (mongod in terminal)
 
-## Project Ideas
+Setup & Run
+Bash# 1. Clone and enter project
+git clone https://github.com/yourusername/mern-blog.git
+cd mern-blog
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+# 2. Start Backend (Terminal 1)
+cd server
+npm install
+npm run dev
 
-## Submission
+# 3. Start Frontend (Terminal 2)
+cd client
+npm install
+npm run dev
+Open http://localhost:5173
+What You’ll See
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Register with your full name
+Auto-login + redirect to home
+See "Welcome, [Your Name]!" in navbar
+Create post with image
+View all posts with images and author names
+Secure logout
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
-
-## Resources
-
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+![alt text](<Screenshot 2025-11-20 151258.png>)
