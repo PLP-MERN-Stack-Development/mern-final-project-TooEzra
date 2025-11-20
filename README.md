@@ -4,6 +4,11 @@
 
 ![MERN Blog](https://res.cloudinary.com/dq4kmsowc/image/upload/v1736280000/ezra-mern-blog-banner.png)
 
+-----
+## Live link
+
+-- https://resplendent-syrniki-4a86a9.netlify.app/
+
 ## Features Implemented (ALL DONE)
 
 - User Registration & Login (JWT Authentication)
